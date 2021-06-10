@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+<body>
+    {% for mahsulot in mahsulotlar %}
+    {{ mahsulot }}
+    {{ mahsulot.time }}
+    {% endfor %}
+    <br>
+    {% for toifa in toifalar %}
+    {{ toifa }}
+
+    {% endfor %}
+
+</body>
+</html>
