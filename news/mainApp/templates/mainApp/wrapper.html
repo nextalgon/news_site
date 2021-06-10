@@ -1,19 +1,210 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online 24</title>
+    <link rel="stylesheet" href="{% static 'mainApp/sass/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/sass/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/sass/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/sass/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/font-awesome-4.7.0/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mainApp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mainApp/sass/style.css' %}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    {% for mahsulot in mahsulotlar %}
-    {{ mahsulot }}
-    {{ mahsulot.time }}
-    {% endfor %}
-    <br>
-    {% for toifa in toifalar %}
-    {{ toifa }}
 
-    {% endfor %}
+    <section class="news">
+         <div class="container">
+            <div class="row navbar">
+                <div class="col-lg-4 col-md-4">
+                    <div class="hamb" onclick="add()">
+                        <img src="{% static 'mainApp/images/main/menu.svg' %}" alt="" id="hamb">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                    <div class="logo">
+                        <img src="{% static 'mainApp/images/main/logo.png' %}" alt="">
+                    </div>
+                </div>
 
+            </div>
+            <div class="menu" id="menu">
+                <div class="logon">
+                    <img src="{% static 'mainApp/images/main/logo.png' %}" alt="">
+                </div>
+                <div class="close" onclick="remove()">
+                    <img src="{% static 'mainApp/images/main/close.svg' %}" alt="" id="close">
+                </div>
+
+
+                <ul class="nav-list">
+                    <li><a href="#" class="actives">Barcha yangiliklar</a></li>
+                    <li><a href="#">So'ngi yangiliklar</a></li>
+                    <li><a href="#">Biz haqimizda</a></li>
+                    <li><a href="#">Aloqa</a></li>
+                  </ul>
+            </div>
+         </div>
+
+
+            <section class="asosiy">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Yangiliklar</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12 boxes">
+                           <div class="row">
+                               <div class="col-lg-6 col-md-8">
+                                  <div class="box1">
+                                      {% for topic in topics %}
+                                    <img src="{{ topic.image.url }}" alt="picture1">
+                                    <div class="contents">
+                                        <p>{{ topic.time }}</p>
+                                        <h2>{{ topic.name }}</h2>
+                                        <p class="one">{{ topic.description }}</p>
+                                        <a href="">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        {% endfor %}
+                                    </div>
+                                  </div>
+                               </div>
+
+                    <br>
+                    <br>
+                    <br><br><br>
+
+                    <div class="row mb-5">
+                        <div class="col-lg-12 boxes">
+                           <div class="row">
+                               <div class="col-md-12">
+                                <div class="box1 new">
+                                    <img src="{% static 'mainApp/images/yangiliklar/church.png' %}" alt="picture1">
+                                    <div class="contents">
+
+                                        <p></p>
+                                        <h2></h2>
+                                        <p class="one"></p>
+                                        <a href="">Batafsil <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+                                    </div>
+                                  </div>
+                               </div>
+                               <div class="col-lg-6 col-md-8 smth">
+
+                                  <div class="box3">
+                                    <img src="{% static 'mainApp/images/yangiliklar/church.png' %}" alt="picture1">
+                                    <div class="contents">
+                                        <p>21 May 2021</p>
+                                        <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                                        <p class="one">Ramazon oyi munosabati bilan katta chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
+                                        <a href="text.html">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                  </div>
+                                  <div class="box3">
+                                    <img src="{% static 'mainApp/images/yangiliklar/church2.png' %}" alt="picture1">
+                                    <div class="contents">
+                                        <p>21 May 2021</p>
+                                        <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                                        <p class="one">Ramazon oyi munosabati bilan katta chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
+                                        <a href="text.html">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    </div>
+                                  </div>
+                               </div>
+
+                  <br><br><br>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-4 church">
+                            <img src="{% static 'mainApp/images/yangiliklar/church.png' %}" alt="Church">
+                            <div class="contents">
+                                <p>21 May 2021</p>
+                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+
+                                <a href="#">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+            </section>
+
+            <section class="footer">
+                <div class="container">
+                    <div class="row firsts">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="links">
+                                <div class="link">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                                <div class="link">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                                <div class="link">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                                <div class="link">
+                                    <img src="{% static 'mainApp/images/main/telegram.png' %}" alt="telegram">
+                                </div>
+                                <div class="link">
+                                   <img src="{% static 'mainApp/images/main/tik-tok.png' %}" alt="tik-tok">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                            <div class="logo">
+                                <img src="{% static 'mainApp/images/main/logo.png' %}" alt="Logo">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 d-flex justify-content-end">
+                            <ul class="list">
+                                <li><a href="news.html">Yangiliklar</a></li>
+                                <li><a href="#">Biz haqimizda</a></li>
+                                <li><a href="#">Aloqa</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row seconds d-flex align-items-start">
+                       <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-end">
+                           <div class="contact">
+                              <i class="fa fa-envelope" aria-hidden="true"></i>
+                              <a href="#">nextalgon6769@gmail.com</a>
+                           </div>
+                       </div>
+                       <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-center">
+                        <div class="contact">
+                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            <p class="p-0 m-0">+998946776767</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 d-flex justify-content-start">
+                        <div class="contact">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                           <p>Bodomzor ko'chasi 14-uy</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+    </section>
+
+
+
+    <script src="{% static 'mainApp/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'mainApp/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'mainApp/js/slick.js' %}"></script>
+    <script src="{% static 'mainApp/js/main.js' %}"></script>
 </body>
 </html>
