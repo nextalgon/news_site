@@ -1,0 +1,60 @@
+{% extends 'mainApp/wrapper.html' %}
+{% load static %}
+{% block title %} New_topic {% endblock %}
+
+<section class="news">
+         <div class="container">
+            <div class="row navbar">
+                <div class="col-lg-4 col-md-4">
+                    <div class="hamb" onclick="add()">
+                        <img src="{% static 'mainApp/images/main/menu.svg' %}" alt="" id="hamb">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                    <div class="logo">
+                        <img src="{% static 'mainApp/images/main/logo.png' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="menu" id="menu">
+                <div class="logon">
+                    <img src="{% static 'mainApp/images/main/logo.png' %}" alt="">
+                </div>
+                <div class="close" onclick="remove()">
+                    <img src="{% static 'mainApp/images/main/close.svg' %}" alt="" id="close">
+                </div>
+
+
+                <ul class="nav-list">
+                   {% for category in categories %}
+                    <li><a href="{% url 'category' category.id %}" class="actives">{{ category.name }}</a></li>
+                    {% endfor %}
+                    <li><a href="#">Aloqa</a></li>
+                  </ul>
+            </div>
+         </div>
+
+
+
+{% block content %}
+                    <div class="row">
+                        <div class="col-lg-12 boxes">
+                           <div class="row">
+                               <div class="col-lg-6 col-md-8">
+                                  <div class="box1">
+                                    <img src="{{ object.image.url }}" alt="picture1">
+                                    <div class="contents">
+                                        <p>{{ object.time }}</p>
+                                        <h2>{{ object.name }}</h2>
+                                        <p class="one">{{ object.description }}</p>
+                                    </div>
+                                  </div>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+{% endblock %}
+
+
+
