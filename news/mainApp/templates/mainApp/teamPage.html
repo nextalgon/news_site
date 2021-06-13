@@ -1,0 +1,130 @@
+{% extends 'mainApp/wrapper.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #556;
+}
+</style>
+</head>
+<body>
+
+<h2>"Torpeda" jamoasi!</h2>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'mainApp/qobiljon.jpg' %}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h1>Qobiljon</h1>
+        <p class="title">Project Manager</p>
+        <p>Proekt asoschisi, motivator, geniy</p>
+        <p>Qobiljon@example.com</p>
+        <p>+998999999999</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'mainApp/rasul.jpg' %}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h1>Ramziddin</h1>
+        <p class="title">Fin derektr</p>
+        <p>Finansviy yordamchi)</p>
+        <p>Ramziddin@example.com</p>
+        <p>+998998888888</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'mainApp/ramziddin.jpg' %}" alt="John" style="width:100%">
+      <div class="container">
+        <h1>Rasul</h1>
+        <p class="title">SMM, SEO</p>
+        <p>Bosh muxarrir. SEO and SMM managment </p>
+        <p>Rasul@example.com</p>
+        <p>+998997777777</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="column">
+    <div class="card">
+      <img src="{% static 'mainApp/utkir.jpg' %}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h1>Utkurbek</h1>
+        <p class="title">Bekorchi</p>
+        <p>G'irt Bezori, daydi grajdan</p>
+        <p>Utkurbek@example.com</p>
+        <p>+998996666666</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+</body>
+</html>
+{% endblock %}

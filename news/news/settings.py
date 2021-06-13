@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-z@=lj%j!i4in=+cr6eqctg%#)z&j$i9w*c(#hm2+%i5xlnscvw
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
+    'd1b5ee90825e.ngrok.io'
     ]
 
 
@@ -107,9 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uz-uz'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ashkhabad'
 
 USE_I18N = True
 
@@ -123,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS =[
+STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

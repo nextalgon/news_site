@@ -1,0 +1,15 @@
+ @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+         .warn {
+    padding: 20px;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+   }
+   .warn:hover {
+    background: #fc0;
+   }
